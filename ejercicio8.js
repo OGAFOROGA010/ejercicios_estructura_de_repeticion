@@ -1,4 +1,14 @@
-let n = 10
+const readline = require("readline");
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("Ingrese el tamaño de la pirámide: ", function (respuesta) {
+
+    let n = Number(respuesta);
+
 
 for (let i = 1; i <= n; i++) {
     let linea = "";
@@ -17,3 +27,6 @@ for (let i = 1; i <= n; i++) {
 
     console.log(linea);
 }
+
+rl.close();
+});
